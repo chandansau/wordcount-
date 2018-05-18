@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>count</title>
+</head>
+<body>
+<a href="{% url 'home' %}">HOME</a>
+<h1>There are {{ count }} Word Count</h1>
+<h1>Your text</h1>
+{{ fulltext }}
+
+<h2>no. of words Count:</h2><br>
+
+{% for word,count in worddictionary %}
+    <h3> {{ word }}:{{ count }}<br></h3>
+
+{% endfor %}
+
+
+</body>
+</html>
